@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <style>
+      body{
+        background-image: url('static/bg2.jpeg');
+        background-position-y: 20px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        
+      }
+      
+      
+          </style>
+  </head>
+  <body>
+    <nav>
+      <ul> 
+       
+        <li><a  href="userloginpage">LOGIN</a></li>
+        <li><a  href="#" class="active">REGISTER</a></li>
+        <li><a href="/" >HOME</a></li>
+        <li style="float: left;" >
+          <a href="#" style="color: #ffffff; font-size: 20px; ">BRAIN STROKE PREDICTION</a></li>
+      </ul>
+    </nav>
+<br><br>
+    <div class="form">
+      <div class="flashes">
+        {% for message in get_flashed_messages() %}
+          {{ message }}
+        {% endfor %}
+      </div>
+      <h2>USER REGISTERATION</h2>
+      <form action="userregister" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" onchange="validatephno()" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+       
+        
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" onchange="validatepass()" required>
+        <input type="submit" value="Register">
+        
+      </form>
+    </div>
+    <script>
+      function validatephno(){
+        var phno = document.getElementById("phone").value;
+        var lenphno = phno.length
+        if(lenphno!=10){
+          alert("Invalid phone number");
+          document.getElementById("phone").value="";
+
+
+        }
+      }
+
+      function validatepass(){
+        var password = document.getElementById("password").value;
+        var lenpass = password.length;
+        if(lenpass<7){
+          alert("Password length should be atleast 8 characters");
+          document.getElementById("password").value="";
+        }
+      }
+    </script>
+  </body>
+</html>

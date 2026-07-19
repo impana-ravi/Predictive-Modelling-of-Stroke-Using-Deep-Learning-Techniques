@@ -1,0 +1,29 @@
+best_model.h5
+best_model2.h5
+best_model.h5
+best_model2.h5
+
+# VS Code
+.vscode/
+
+# Dataset
+Mri dataset/
+
+# Uploaded images
+uploads/
+static/uploads/
+
+# Result images and documents
+Final results/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment (if created later)
+venv/
+env/
+
+# System files
+.DS_Store
+Thumbs.db

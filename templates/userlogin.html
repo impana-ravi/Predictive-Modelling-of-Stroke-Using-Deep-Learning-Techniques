@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <style>
+ body{
+        background-image: url('static/bg2.jpeg');
+        background-position-y: 20px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        
+      }
+      
+
+
+    </style>
+  </head>
+  <body >
+    <nav>
+      <ul>
+       
+        <li><a  href="#" class="active">LOGIN</a></li>
+        <li><a  href="userregisterpage">REGISTER</a></li>
+        <li><a href="/" >HOME</a></li>
+        <li style="float: left;" >
+          <a href="#" style="color: #ffffff; font-size: 20px; ">BRAIN STROKE PREDICTION</a></li>
+      </ul>
+    </nav>
+    <br>
+   
+<br><br>
+
+    <div class="form">
+      <h2>LOGIN</h2>
+      <div class="flashes">
+        {% for message in get_flashed_messages() %}
+          {{ message }}
+        {% endfor %}
+      </div>
+      <form action="userlogin" method="POST">
+        
+        <label for="name">EMAIL:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password">PASSWORD:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <input type="submit" value="LOGIN">
+      </form>
+    </div>
+  </body>
+</html>
