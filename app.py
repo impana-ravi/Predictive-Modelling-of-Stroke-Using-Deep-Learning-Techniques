@@ -16,8 +16,8 @@ import smtplib
 from email.mime.text import MIMEText
 
 def send_email(result_class, probability, receiver):
-    sender_email = "smonisha913@gmail.com"
-    sender_password = "tmuxwhqojcgbdflx"
+    sender_email = "xyz@gmail.com"
+    sender_password = "xyz"
     receiver_email = receiver
 
     # -------- Different Plans --------
